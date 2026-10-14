@@ -14,7 +14,7 @@
 
 > **TL;DR:** Models, subscriptions and coding agents change. This repository keeps the context and skills I carry between them: who I am, how I work and the workflows I use day to day. Symlinks let different agents share the same files.
 
-<img width="1500" height="505" alt="The my-skills repository shares AGENTS.md and skills with Claude Code, Codex and other AI agents through symlinks." src="https://github.com/user-attachments/assets/REPLACE_WITH_UPLOADED_IMAGE_ID" />
+<img width="1500" height="505" alt="The my-skills repository shares AGENTS.md and skills with Claude Code, Codex and other AI agents through symlinks." src="https://github.com/user-attachments/assets/30fca26a-0498-44a8-ab67-0aedab6a5ae4" />
 
 ## Skills
 
