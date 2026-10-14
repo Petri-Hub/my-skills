@@ -35,7 +35,7 @@ Use these skills whenever a request matches the description below, even when Pet
 
 | Skill | Use when | Reference |
 |---|---|---|
-| `/humanizer` | Asked to draft, rewrite, or polish prose such as documentation, posts, messages, and summaries. Apply it as a final editing pass while preserving facts and the requested voice. | [blader/humanizer](https://github.com/blader/humanizer) |
+| `/humanizer` | Asked to draft, rewrite, or polish blog posts, social posts, essays, or personal messages that should sound like the writer. Apply it as a final editing pass while preserving facts and the requested voice. | [blader/humanizer](https://github.com/blader/humanizer) |
 | `/brag` | Asked to showcase a website or app with a short launch video, including requests to "brag about this" or share what was built. Read the project code, plan and render the video with Hyperframes, and write share copy. | [latent-spaces/brag](https://github.com/latent-spaces/brag/tree/main/skills/brag) |
 | `/style` | Writing, changing, reviewing, or refactoring code. Apply Kent Beck's simple design and incremental improvement principles throughout the work. | [kent-beck-style](https://github.com/nathankim0/clean-architecture-skills/tree/main/plugins/kent-beck-style/skills/kent-beck-style) |
 | `/simplify` | Asked to simplify code, or when recently changed code has avoidable complexity. Preserve behavior and stay within the task's scope. | [akitaonrails/my-skills](https://github.com/akitaonrails/my-skills/tree/master/simplify) |

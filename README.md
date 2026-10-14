@@ -12,41 +12,43 @@
 
 ## About
 
-> **TL;DR:** My global [`AGENTS.md`](AGENTS.md) tells agents who I am, where my work lives and how I want them to work. The folders here hold skills for coding, editing prose, simplifying code and making launch videos. Each skill's original source is linked below.
+> **TL;DR:** Models, subscriptions and coding agents change. This repository keeps the context and skills I carry between them: who I am, how I work and the workflows I use day to day. Symlinks let different agents share the same files.
 
-## Why it exists
-
-I use agents in different projects and want them to start with the same basic context. `AGENTS.md` carries the facts and rules that follow me between repositories. A project's own instructions can add what is specific to that project.
-
-Skills carry the longer workflows. An agent loads the relevant skill when the request calls for it, including when I describe the work in plain language instead of typing a slash command.
+<img width="1500" height="505" alt="The my-skills repository shares AGENTS.md and skills with Claude Code, Codex and other AI agents through symlinks." src="https://github.com/user-attachments/assets/REPLACE_WITH_UPLOADED_IMAGE_ID" />
 
 ## Skills
 
 Each directory has a `SKILL.md` entry point and any files that skill needs.
 
-| Skill | What it does | Source |
-|---|---|---|
-| [style](style/SKILL.md) | Applies Kent Beck's simple design principles while writing, reviewing or refactoring code. | [kent-beck-style](https://github.com/nathankim0/clean-architecture-skills/tree/main/plugins/kent-beck-style/skills/kent-beck-style) |
-| [simplify](simplify/SKILL.md) | Makes working code easier to read without changing its behavior. | [Fábio Akita's adaptation](https://github.com/akitaonrails/my-skills/tree/master/simplify) of [Addy Osmani's skill](https://github.com/addyosmani/agent-skills/tree/main/skills/code-simplification) |
-| [humanizer](humanizer/SKILL.md) | Revises prose that sounds generated while preserving its facts and intended voice. | [blader/humanizer](https://github.com/blader/humanizer) |
-| [brag](brag/SKILL.md) | Turns a website or app into a short launch video with music, motion and share copy. | [latent-spaces/brag](https://github.com/latent-spaces/brag/tree/main/skills/brag) |
+| Skill | What it does |
+|---|---|
+| [style](style/SKILL.md) | Applies Kent Beck's simple design principles while writing, reviewing or refactoring code. |
+| [simplify](simplify/SKILL.md) | Makes working code easier to read without changing its behavior. |
+| [humanizer](humanizer/SKILL.md) | Revises prose that sounds generated while preserving its facts and intended voice. |
+| [brag](brag/SKILL.md) | Turns a website or app into a short launch video with music, motion and share copy. |
 
-The [skill registry in `AGENTS.md`](AGENTS.md#skills-to-use) says when agents should use each one. The `SKILL.md` files hold the actual workflows.
+## Why it exists
 
-## How it is used
+I moved between Claude Code and Codex, and I expect to keep trying other tools and models. If GLM or DeepSeek becomes a better fit, I want to switch without rebuilding the instructions and workflows I rely on each day. The model, subscription and harness are choices I can change; this repository is what I take with me.
 
-Run `make link` to link `AGENTS.md` as `~/.codex/AGENTS.md` and `~/.claude/CLAUDE.md`, and to link each skill folder into `~/.codex/skills` and `~/.claude/skills`. Edits to a linked file are available to both harnesses. Run it again after adding a skill folder. Existing links to the same source are skipped; a different file or directory with the same name causes the command to stop without replacing it.
+The same context reaches Pepper, my Hermes agent. When she delegates coding work to Codex, Codex uses these standards too. A project's own instructions can still add what is specific to that project.
 
-## Decisions
+## Philosophy
 
-**Keep global context short.** `AGENTS.md` covers my background, storage map, skill triggers and rules that apply across projects. Detailed procedures belong in skills or project repositories.
+**One source, linked where I work.**  
+The files live here. `make link` creates individual symlinks for `AGENTS.md` and the skills in my local agent directories. Edits to an existing skill reach those agents through the links; when I add a skill or set up a new machine, I run the command again.
 
-**Make triggers explicit.** A request to write code should pick up `style`; a request to draft prose should get a `humanizer` pass. The request does not need to name the skill.
+**Keep my own copies.**  
+I keep the skills I use in this repository and bring in upstream changes when I choose to. I can review their instructions before they reach an agent, so an upstream prompt change never enters my setup automatically.
 
-**Keep upstream visible.** These are vendored skills. Changes from their source repositories are reviewed and copied in deliberately, with the local adaptations and credits kept in view.
+**Work with the model.**  
+As models get better, I get more from pairing with an LLM: watching its work, interrupting when it goes off course and adjusting together. A large specification driven development (SDD) pipeline can help on some tasks, but I do not need one for every task.
 
-## Sources and licenses
+## References
 
-`brag`, `humanizer` and `style` include their upstream MIT notices. `style` is the Kent Beck skill renamed for this workflow, with a broader coding trigger. `simplify` comes from Akita's adaptation of Addy Osmani's skill; Addy's MIT notice is included with the original material in [`simplify/`](simplify/README.md).
-
-The music bundled with `brag` is credited in its [music README](brag/assets/music/README.md) under CC BY 4.0. Its [audio reference](brag/references/audio.md) records the sound effect sources.
+- [Agent Skills specification](https://agentskills.io/specification)
+- [Fábio Akita's my-skills repository](https://github.com/akitaonrails/my-skills)
+- [Kent Beck coding style skill](https://github.com/nathankim0/clean-architecture-skills/tree/main/plugins/kent-beck-style/skills/kent-beck-style)
+- [Fábio Akita's code simplification skill](https://github.com/akitaonrails/my-skills/tree/master/simplify), adapted from [Addy Osmani's original](https://github.com/addyosmani/agent-skills/tree/main/skills/code-simplification)
+- [Humanizer writing skill](https://github.com/blader/humanizer)
+- [Brag launch video skill](https://github.com/latent-spaces/brag/tree/main/skills/brag)
