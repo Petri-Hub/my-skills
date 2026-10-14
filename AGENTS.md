@@ -20,6 +20,7 @@ These are starting points for context. Use the storage relevant to the task, and
 
 | Storage | What it holds | When to read or write |
 |---|---|---|
+| [my-skills](https://github.com/Petri-Hub/my-skills) | Shared global agent context and reusable skills for coding agents. | Read for agent setup and skill workflows; write when updating shared instructions, skills, or their linking setup. |
 | [pepper](https://github.com/Petri-Hub/pepper) | Public repository documenting Pepper, Petri's personal agent, and the choices behind her configuration. | Read to understand Pepper's setup; write when updating her documented behavior or configuration. |
 | [lab](https://github.com/Petri-Hub/lab) | Configuration and infrastructure for Petri's homelab. | Read for homelab context; write when changing its infrastructure configuration. |
 | [atlas](https://github.com/Petri-Hub/atlas) | Private workspace for Petri's career and professional life, including his background, goals, and plans. | Read for career or professional context; write when updating career plans, research, or materials. |
@@ -42,4 +43,5 @@ Use these skills whenever a request matches the description below, even when Pet
 ## Constraints and Guidelines
 
 - **Conventional commits.** Whenever you create a Git commit, use the Conventional Commits format. Choose a type that matches the change, add a scope when it clarifies the affected area, and write a concise summary of what changed. Apply this to every commit you make.
-- **English for written work.** Use English for your replies and for text you create during development, including code comments, documentation, commit messages, pull request text, and task summaries. When working with material in another language, preserve existing text you are not changing and write new or revised text in English. Keep proper names and exact quotations as written.
+- **Follow the conversation language.** Reply in the language the user is using. If a conversation starts in Portuguese, continue in Portuguese unless the user switches languages or asks otherwise.
+- **English for project material by default.** Write code, identifiers, comments, documentation, commit messages, pull request text, and other project material in English unless the user asks for another language or the task clearly calls for it, such as Portuguese university work. Preserve existing text you are not changing, and keep proper names and exact quotations as written.

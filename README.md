@@ -35,9 +35,7 @@ The [skill registry in `AGENTS.md`](AGENTS.md#skills-to-use) says when agents sh
 
 ## How it is used
 
-On my current machine, Codex reads `AGENTS.md` through `~/.codex/AGENTS.md`, a symlink to this repository. The four skills in `~/.codex/skills` are still separate copies, so changes here need to be copied there before Codex sees them.
-
-For a shared setup across harnesses, each harness can keep its own skills directory and link individual skill folders from this repository into it. Built-in and plugin skills can stay alongside those links. This repository does not install or update skills automatically.
+Run `make link` to link `AGENTS.md` as `~/.codex/AGENTS.md` and `~/.claude/CLAUDE.md`, and to link each skill folder into `~/.codex/skills` and `~/.claude/skills`. Edits to a linked file are available to both harnesses. Run it again after adding a skill folder. Existing links to the same source are skipped; a different file or directory with the same name causes the command to stop without replacing it.
 
 ## Decisions
 
