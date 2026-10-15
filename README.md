@@ -26,6 +26,7 @@ Each directory has a `SKILL.md` entry point and any files that skill needs.
 | [simplify](simplify/SKILL.md) | Makes working code easier to read without changing its behavior. |
 | [humanizer](humanizer/SKILL.md) | Revises prose that sounds generated while preserving its facts and intended voice. |
 | [brag](brag/SKILL.md) | Turns a website or app into a short launch video with music, motion and share copy. |
+| [excalidraw](excalidraw/SKILL.md) | Creates, refines and exports editable Excalidraw diagrams through the local MCP server. |
 
 ## Why it exists
 
@@ -52,3 +53,4 @@ As models get better, I get more from pairing with an LLM: watching its work, in
 - [Fábio Akita's code simplification skill](https://github.com/akitaonrails/my-skills/tree/master/simplify), adapted from [Addy Osmani's original](https://github.com/addyosmani/agent-skills/tree/main/skills/code-simplification)
 - [Humanizer writing skill](https://github.com/blader/humanizer)
 - [Brag launch video skill](https://github.com/latent-spaces/brag/tree/main/skills/brag)
+- [Excalidraw MCP server and skill](https://github.com/yctimlin/mcp_excalidraw)
