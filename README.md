@@ -14,7 +14,19 @@
 
 > **TL;DR:** Models, subscriptions and coding agents change. This repository keeps the context and skills I carry between them: who I am, how I work and the workflows I use day to day. Symlinks let different agents share the same files.
 
-<img width="1500" height="505" alt="The my-skills repository shares AGENTS.md and skills with Claude Code, Codex and other AI agents through symlinks." src="https://github.com/user-attachments/assets/30fca26a-0498-44a8-ab67-0aedab6a5ae4" />
+<img width="1500" height="505" alt="The my-skills repository shares AGENTS.md and skills with Claude Code, Codex, OpenCode and other AI agents through symlinks." src="https://github.com/user-attachments/assets/30fca26a-0498-44a8-ab67-0aedab6a5ae4" />
+
+## Setup
+
+Run `make link` once per machine, and again after adding a skill or setting up a new agent. It links this repository's files into each agent's own directories:
+
+| Agent | Instructions | Skills |
+|---|---|---|
+| Claude Code | `~/.claude/CLAUDE.md` | `~/.claude/skills/` |
+| Codex | `~/.codex/AGENTS.md` | `~/.codex/skills/` |
+| OpenCode | `~/.config/opencode/AGENTS.md` | `~/.config/opencode/skills/` |
+
+OpenCode reads the global files from `$XDG_CONFIG_HOME/opencode` when `XDG_CONFIG_HOME` is set, which is where the links go instead of `~/.config/opencode`.
 
 ## Skills
 
@@ -30,14 +42,14 @@ Each directory has a `SKILL.md` entry point and any files that skill needs.
 
 ## Why it exists
 
-I moved between Claude Code and Codex, and I expect to keep trying other tools and models. If GLM or DeepSeek becomes a better fit, I want to switch without rebuilding the instructions and workflows I rely on each day. The model, subscription and harness are choices I can change; this repository is what I take with me.
+I moved between Claude Code, Codex and OpenCode, and I expect to keep trying other tools and models. If GLM or DeepSeek becomes a better fit, I want to switch without rebuilding the instructions and workflows I rely on each day. The model, subscription and harness are choices I can change; this repository is what I take with me.
 
 The same context reaches Pepper, my Hermes agent. When she delegates coding work to Codex, Codex uses these standards too. A project's own instructions can still add what is specific to that project.
 
 ## Philosophy
 
 **One source, linked where I work.**  
-The files live here. `make link` creates individual symlinks for `AGENTS.md` and the skills in my local agent directories. Edits to an existing skill reach those agents through the links; when I add a skill or set up a new machine, I run the command again.
+The files live here. `make link` creates individual symlinks for `AGENTS.md` and the skills in my local agent directories (Claude Code, Codex and OpenCode). Edits to an existing skill reach those agents through the links; when I add a skill or set up a new machine, I run the command again.
 
 **Keep my own copies.**  
 I keep the skills I use in this repository and bring in upstream changes when I choose to. I can review their instructions before they reach an agent, so an upstream prompt change never enters my setup automatically.
