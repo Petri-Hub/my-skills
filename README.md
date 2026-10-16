@@ -26,8 +26,6 @@ Run `make link` once per machine, and again after adding a skill or setting up a
 | Codex | `~/.codex/AGENTS.md` | `~/.codex/skills/` |
 | OpenCode | `~/.config/opencode/AGENTS.md` | `~/.config/opencode/skills/` |
 
-OpenCode reads the global files from `$XDG_CONFIG_HOME/opencode` when `XDG_CONFIG_HOME` is set, which is where the links go instead of `~/.config/opencode`.
-
 ## Skills
 
 Each directory has a `SKILL.md` entry point and any files that skill needs.
