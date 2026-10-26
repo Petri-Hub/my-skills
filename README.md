@@ -24,6 +24,7 @@ Run `make link` once per machine, and again after adding a skill or setting up a
 |---|---|---|
 | Claude Code | `~/.claude/CLAUDE.md` | `~/.claude/skills/` |
 | Codex | `~/.codex/AGENTS.md` | `~/.codex/skills/` |
+| Gemini | `~/.gemini/AGENTS.md` | `~/.gemini/config/skills/` |
 | OpenCode | `~/.config/opencode/AGENTS.md` | `~/.config/opencode/skills/` |
 
 ## Skills
@@ -37,17 +38,18 @@ Each directory has a `SKILL.md` entry point and any files that skill needs.
 | [humanizer](humanizer/SKILL.md) | Revises prose that sounds generated while preserving its facts and intended voice. |
 | [brag](brag/SKILL.md) | Turns a website or app into a short launch video with music, motion and share copy. |
 | [excalidraw](excalidraw/SKILL.md) | Guides diagram design and uses the local Excalidraw MCP server to create and render diagrams. |
+| [wave](wave/SKILL.md) | Controls Wave Terminal with the wsh CLI: opens files, PDFs, and websites in blocks and manages blocks, tabs, and workspaces. |
 
 ## Why it exists
 
-I moved between Claude Code, Codex and OpenCode, and I expect to keep trying other tools and models. If GLM or DeepSeek becomes a better fit, I want to switch without rebuilding the instructions and workflows I rely on each day. The model, subscription and harness are choices I can change; this repository is what I take with me.
+I moved between Claude Code, Codex, OpenCode and Gemini, and I expect to keep trying other tools and models. If GLM or DeepSeek becomes a better fit, I want to switch without rebuilding the instructions and workflows I rely on each day. The model, subscription and harness are choices I can change; this repository is what I take with me.
 
 The same context reaches Pepper, my Hermes agent. When she delegates coding work to Codex, Codex uses these standards too. A project's own instructions can still add what is specific to that project.
 
 ## Philosophy
 
 **One source, linked where I work.**  
-The files live here. `make link` creates individual symlinks for `AGENTS.md` and the skills in my local agent directories (Claude Code, Codex and OpenCode). Edits to an existing skill reach those agents through the links; when I add a skill or set up a new machine, I run the command again.
+The files live here. `make link` creates individual symlinks for `AGENTS.md` and the skills in my local agent directories (Claude Code, Codex, OpenCode and Gemini). Edits to an existing skill reach those agents through the links; when I add a skill or set up a new machine, I run the command again.
 
 **Keep my own copies.**  
 I keep the skills I use in this repository and bring in upstream changes when I choose to. I can review their instructions before they reach an agent, so an upstream prompt change never enters my setup automatically.
