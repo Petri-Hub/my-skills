@@ -40,6 +40,10 @@ Use these skills whenever a request matches the description below, even when Pet
 | `/style` | Writing, changing, reviewing, or refactoring code. Apply Kent Beck's simple design and incremental improvement principles throughout the work. | [kent-beck-style](https://github.com/nathankim0/clean-architecture-skills/tree/main/plugins/kent-beck-style/skills/kent-beck-style) |
 | `/simplify` | Asked to simplify code, or when recently changed code has avoidable complexity. Preserve behavior and stay within the task's scope. | [akitaonrails/my-skills](https://github.com/akitaonrails/my-skills/tree/master/simplify) |
 
+## Memory
+
+Long-term memory is [ai-memory](https://github.com/akitaonrails/ai-memory), self-hosted and shared by every coding agent here. It keeps each project's wiki, sessions and observations in one store, so work started in one harness can continue in another. Lifecycle hooks capture sessions as they run, and the `ai-memory-*` skills explain how to read that memory, write to it and keep it tidy. Use them whenever a task needs prior context, a handoff, or a note worth keeping.
+
 ## Constraints and Guidelines
 
 - **Conventional commits.** Whenever you create a Git commit, use the Conventional Commits format. Choose a type that matches the change, add a scope when it clarifies the affected area, and write a concise summary of what changed. Apply this to every commit you make.
