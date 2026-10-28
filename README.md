@@ -22,32 +22,49 @@ Run `make link` once per machine, and again after adding a skill or setting up a
 
 | Agent | Instructions | Skills |
 |---|---|---|
+| Antigravity CLI | `~/.gemini/config/AGENTS.md` | `~/.gemini/config/skills/` |
 | Claude Code | `~/.claude/CLAUDE.md` | `~/.claude/skills/` |
 | Codex | `~/.codex/AGENTS.md` | `~/.codex/skills/` |
 | OpenCode | `~/.config/opencode/AGENTS.md` | `~/.config/opencode/skills/` |
 
 ## Skills
 
-Each directory has a `SKILL.md` entry point and any files that skill needs.
+Each directory under `skills/` has a `SKILL.md` entry point and any files that skill needs.
 
 | Skill | What it does |
 |---|---|
-| [style](style/SKILL.md) | Applies Kent Beck's simple design principles while writing, reviewing or refactoring code. |
-| [simplify](simplify/SKILL.md) | Makes working code easier to read without changing its behavior. |
-| [humanizer](humanizer/SKILL.md) | Revises prose that sounds generated while preserving its facts and intended voice. |
-| [brag](brag/SKILL.md) | Turns a website or app into a short launch video with music, motion and share copy. |
-| [excalidraw](excalidraw/SKILL.md) | Guides diagram design and uses the local Excalidraw MCP server to create and render diagrams. |
+| [style](skills/style/SKILL.md) | Applies Kent Beck's simple design principles while writing, reviewing or refactoring code. |
+| [simplify](skills/simplify/SKILL.md) | Makes working code easier to read without changing its behavior. |
+| [humanizer](skills/humanizer/SKILL.md) | Revises prose that sounds generated while preserving its facts and intended voice. |
+| [brag](skills/brag/SKILL.md) | Turns a website or app into a short launch video with music, motion and share copy. |
+| [excalidraw](skills/excalidraw/SKILL.md) | Guides diagram design and uses the local Excalidraw MCP server to create and render diagrams. |
+| [calendar](skills/calendar/SKILL.md) | Places each commitment on the right calendar and keeps the schedule free of duplicates. |
+| [wave](skills/wave/SKILL.md) | Opens files, folders and websites, and manages blocks, tabs and workspaces inside Wave Terminal. |
+
+## Memory
+
+The memory system is [ai-memory](https://github.com/akitaonrails/ai-memory), self-hosted and shared by every agent in this setup. It keeps each project's wiki, sessions and observations in one store, so a session started in Claude Code can be continued in Codex or OpenCode. Lifecycle hooks capture the session as it runs.
+
+| Skill | What it does |
+|---|---|
+| [ai-memory-overview](skills/ai-memory-overview/SKILL.md) | Explains the memory system and how a memory call picks a project. |
+| [ai-memory-retrieval](skills/ai-memory-retrieval/SKILL.md) | Finds prior context, decisions, rules and recent activity. |
+| [ai-memory-handoff](skills/ai-memory-handoff/SKILL.md) | Saves and resumes work between sessions and agents. |
+| [ai-memory-durable-pages](skills/ai-memory-durable-pages/SKILL.md) | Writes durable or time-limited knowledge on request. |
+| [ai-memory-messaging](skills/ai-memory-messaging/SKILL.md) | Sends messages between projects. |
+| [ai-memory-learning-maintenance](skills/ai-memory-learning-maintenance/SKILL.md) | Consolidates, lints and prunes captured memory. |
+| [ai-memory-routing-install](skills/ai-memory-routing-install/SKILL.md) | Installs or refreshes the ai-memory routing and skills. |
 
 ## Why it exists
 
-I moved between Claude Code, Codex and OpenCode, and I expect to keep trying other tools and models. If GLM or DeepSeek becomes a better fit, I want to switch without rebuilding the instructions and workflows I rely on each day. The model, subscription and harness are choices I can change; this repository is what I take with me.
+I moved between Claude Code, Codex, OpenCode and Antigravity CLI, and I expect to keep trying other tools and models. If GLM or DeepSeek becomes a better fit, I want to switch without rebuilding the instructions and workflows I rely on each day. The model, subscription and harness are choices I can change; this repository is what I take with me.
 
 The same context reaches Pepper, my Hermes agent. When she delegates coding work to Codex, Codex uses these standards too. A project's own instructions can still add what is specific to that project.
 
 ## Philosophy
 
 **One source, linked where I work.**  
-The files live here. `make link` creates individual symlinks for `AGENTS.md` and the skills in my local agent directories (Claude Code, Codex and OpenCode). Edits to an existing skill reach those agents through the links; when I add a skill or set up a new machine, I run the command again.
+The files live here. `make link` creates individual symlinks for `AGENTS.md` and the skills in my local agent directories (Antigravity CLI, Claude Code, Codex and OpenCode). Edits to an existing skill reach those agents through the links; when I add a skill or set up a new machine, I run the command again.
 
 **Keep my own copies.**  
 I keep the skills I use in this repository and bring in upstream changes when I choose to. I can review their instructions before they reach an agent, so an upstream prompt change never enters my setup automatically.
