@@ -37,6 +37,8 @@ Each directory has a `SKILL.md` entry point and any files that skill needs.
 | [humanizer](humanizer/SKILL.md) | Revises prose that sounds generated while preserving its facts and intended voice. |
 | [brag](brag/SKILL.md) | Turns a website or app into a short launch video with music, motion and share copy. |
 | [excalidraw](excalidraw/SKILL.md) | Guides diagram design and uses the local Excalidraw MCP server to create and render diagrams. |
+| [calendar](calendar/SKILL.md) | Places each commitment on the right calendar and keeps the schedule free of duplicates. |
+| [wave](wave/SKILL.md) | Opens files, folders and websites, and manages blocks, tabs and workspaces inside Wave Terminal. |
 
 ## Memory
 

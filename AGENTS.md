@@ -39,6 +39,9 @@ Use these skills whenever a request matches the description below, even when Pet
 | `/brag` | Asked to showcase a website or app with a short launch video, including requests to "brag about this" or share what was built. Read the project code, plan and render the video with Hyperframes, and write share copy. | [latent-spaces/brag](https://github.com/latent-spaces/brag/tree/main/skills/brag) |
 | `/style` | Writing, changing, reviewing, or refactoring code. Apply Kent Beck's simple design and incremental improvement principles throughout the work. | [kent-beck-style](https://github.com/nathankim0/clean-architecture-skills/tree/main/plugins/kent-beck-style/skills/kent-beck-style) |
 | `/simplify` | Asked to simplify code, or when recently changed code has avoidable complexity. Preserve behavior and stay within the task's scope. | [akitaonrails/my-skills](https://github.com/akitaonrails/my-skills/tree/master/simplify) |
+| `/excalidraw` | Asked for a diagram, or to visualize a workflow, architecture, system or concept, including `.excalidraw` files, Obsidian drawings and images for Markdown. Use the Excalidraw MCP tools for every canvas and file operation. | [excalidraw](excalidraw) |
+| `/calendar` | Asked to add, change or check something on Petri's calendar. Place each commitment on the right calendar, check what is already scheduled, and confirm the result afterwards. | [calendar](calendar) |
+| `/wave` | Running inside Wave Terminal and asked to open a file, PDF, image, directory or website, or to manage blocks, tabs or workspaces. Use the `wsh` CLI on the current window instead of `xdg-open` or a second Wave app. | [wave](wave) |
 
 ## Memory
 
