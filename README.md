@@ -38,6 +38,24 @@ Each directory has a `SKILL.md` entry point and any files that skill needs.
 | [brag](brag/SKILL.md) | Turns a website or app into a short launch video with music, motion and share copy. |
 | [excalidraw](excalidraw/SKILL.md) | Guides diagram design and uses the local Excalidraw MCP server to create and render diagrams. |
 
+The skills for the memory system are listed in [Memory](#memory).
+
+## Memory
+
+The memory system is [ai-memory](https://github.com/akitaonrails/ai-memory), self-hosted and shared by every agent in this setup. It keeps each project's wiki, sessions and observations in one store, so a session started in Claude Code can be continued in Codex or OpenCode. Lifecycle hooks capture the session as it runs; the skills below teach an agent how to read that memory, write to it and keep it tidy.
+
+The six `ai-memory-*` skills are copies of the ones shipped with ai-memory, kept here so they link into every agent like the rest. `ai-memory-overview` is mine: it explains the setup and the scope rule that memory calls depend on.
+
+| Skill | What it does |
+|---|---|
+| [ai-memory-overview](ai-memory-overview/SKILL.md) | Explains the memory system and how a memory call picks a project. |
+| [ai-memory-retrieval](ai-memory-retrieval/SKILL.md) | Finds prior context, decisions, rules and recent activity. |
+| [ai-memory-handoff](ai-memory-handoff/SKILL.md) | Saves and resumes work between sessions and agents. |
+| [ai-memory-durable-pages](ai-memory-durable-pages/SKILL.md) | Writes durable or time-limited knowledge on request. |
+| [ai-memory-messaging](ai-memory-messaging/SKILL.md) | Sends messages between projects. |
+| [ai-memory-learning-maintenance](ai-memory-learning-maintenance/SKILL.md) | Consolidates, lints and prunes captured memory. |
+| [ai-memory-routing-install](ai-memory-routing-install/SKILL.md) | Installs or refreshes the ai-memory routing and skills. |
+
 ## Why it exists
 
 I moved between Claude Code, Codex and OpenCode, and I expect to keep trying other tools and models. If GLM or DeepSeek becomes a better fit, I want to switch without rebuilding the instructions and workflows I rely on each day. The model, subscription and harness are choices I can change; this repository is what I take with me.
