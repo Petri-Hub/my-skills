@@ -28,17 +28,17 @@ Run `make link` once per machine, and again after adding a skill or setting up a
 
 ## Skills
 
-Each directory has a `SKILL.md` entry point and any files that skill needs.
+Each directory under `skills/` has a `SKILL.md` entry point and any files that skill needs.
 
 | Skill | What it does |
 |---|---|
-| [style](style/SKILL.md) | Applies Kent Beck's simple design principles while writing, reviewing or refactoring code. |
-| [simplify](simplify/SKILL.md) | Makes working code easier to read without changing its behavior. |
-| [humanizer](humanizer/SKILL.md) | Revises prose that sounds generated while preserving its facts and intended voice. |
-| [brag](brag/SKILL.md) | Turns a website or app into a short launch video with music, motion and share copy. |
-| [excalidraw](excalidraw/SKILL.md) | Guides diagram design and uses the local Excalidraw MCP server to create and render diagrams. |
-| [calendar](calendar/SKILL.md) | Places each commitment on the right calendar and keeps the schedule free of duplicates. |
-| [wave](wave/SKILL.md) | Opens files, folders and websites, and manages blocks, tabs and workspaces inside Wave Terminal. |
+| [style](skills/style/SKILL.md) | Applies Kent Beck's simple design principles while writing, reviewing or refactoring code. |
+| [simplify](skills/simplify/SKILL.md) | Makes working code easier to read without changing its behavior. |
+| [humanizer](skills/humanizer/SKILL.md) | Revises prose that sounds generated while preserving its facts and intended voice. |
+| [brag](skills/brag/SKILL.md) | Turns a website or app into a short launch video with music, motion and share copy. |
+| [excalidraw](skills/excalidraw/SKILL.md) | Guides diagram design and uses the local Excalidraw MCP server to create and render diagrams. |
+| [calendar](skills/calendar/SKILL.md) | Places each commitment on the right calendar and keeps the schedule free of duplicates. |
+| [wave](skills/wave/SKILL.md) | Opens files, folders and websites, and manages blocks, tabs and workspaces inside Wave Terminal. |
 
 ## Memory
 
@@ -46,13 +46,13 @@ The memory system is [ai-memory](https://github.com/akitaonrails/ai-memory), sel
 
 | Skill | What it does |
 |---|---|
-| [ai-memory-overview](ai-memory-overview/SKILL.md) | Explains the memory system and how a memory call picks a project. |
-| [ai-memory-retrieval](ai-memory-retrieval/SKILL.md) | Finds prior context, decisions, rules and recent activity. |
-| [ai-memory-handoff](ai-memory-handoff/SKILL.md) | Saves and resumes work between sessions and agents. |
-| [ai-memory-durable-pages](ai-memory-durable-pages/SKILL.md) | Writes durable or time-limited knowledge on request. |
-| [ai-memory-messaging](ai-memory-messaging/SKILL.md) | Sends messages between projects. |
-| [ai-memory-learning-maintenance](ai-memory-learning-maintenance/SKILL.md) | Consolidates, lints and prunes captured memory. |
-| [ai-memory-routing-install](ai-memory-routing-install/SKILL.md) | Installs or refreshes the ai-memory routing and skills. |
+| [ai-memory-overview](skills/ai-memory-overview/SKILL.md) | Explains the memory system and how a memory call picks a project. |
+| [ai-memory-retrieval](skills/ai-memory-retrieval/SKILL.md) | Finds prior context, decisions, rules and recent activity. |
+| [ai-memory-handoff](skills/ai-memory-handoff/SKILL.md) | Saves and resumes work between sessions and agents. |
+| [ai-memory-durable-pages](skills/ai-memory-durable-pages/SKILL.md) | Writes durable or time-limited knowledge on request. |
+| [ai-memory-messaging](skills/ai-memory-messaging/SKILL.md) | Sends messages between projects. |
+| [ai-memory-learning-maintenance](skills/ai-memory-learning-maintenance/SKILL.md) | Consolidates, lints and prunes captured memory. |
+| [ai-memory-routing-install](skills/ai-memory-routing-install/SKILL.md) | Installs or refreshes the ai-memory routing and skills. |
 
 ## Why it exists
 
