@@ -5,7 +5,9 @@
 <h3 align="center">The context and skills I carry between coding agents.<br>Who I am, where the work lives, and how I want it done</h3>
 
 <p align="center">
+  <a href="https://github.com/Petri-Hub/my-skills/releases"><img alt="Latest release" src="https://img.shields.io/github/v/release/Petri-Hub/my-skills" /></a>
   <a href="https://github.com/Petri-Hub/my-skills/commits/main"><img alt="Last commit" src="https://img.shields.io/github/last-commit/Petri-Hub/my-skills" /></a>
+  <a href="https://github.com/Petri-Hub/my-skills/commits/main"><img alt="Commits" src="https://img.shields.io/github/commit-activity/t/Petri-Hub/my-skills" /></a>
 </p>
 
 <br>
