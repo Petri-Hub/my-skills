@@ -29,20 +29,6 @@ These are starting points for context. Use the storage relevant to the task, and
 | [notebook](https://github.com/Petri-Hub/notebook) | Public Obsidian wiki for technical knowledge and study notes. | Read for existing technical notes; write when adding or revising public notes. |
 | [university-fam](https://github.com/Petri-Hub/university-fam) | Repository for projects, coursework, and study material from Petri's Computer Science degree at FAM. | Read for course or assignment context; write when adding or updating university work. |
 
-## Skills to use
-
-Use these skills whenever a request matches the description below, even when Petri does not name the skill or use a slash command. Read the installed skill before applying it.
-
-| Skill | Use when | Reference |
-|---|---|---|
-| `/humanizer` | Asked to draft, rewrite, or polish blog posts, social posts, essays, or personal messages that should sound like the writer. Apply it as a final editing pass while preserving facts and the requested voice. | [blader/humanizer](https://github.com/blader/humanizer) |
-| `/brag` | Asked to showcase a website or app with a short launch video, including requests to "brag about this" or share what was built. Read the project code, plan and render the video with Hyperframes, and write share copy. | [latent-spaces/brag](https://github.com/latent-spaces/brag/tree/main/skills/brag) |
-| `/style` | Writing, changing, reviewing, or refactoring code. Apply Kent Beck's simple design and incremental improvement principles throughout the work. | [kent-beck-style](https://github.com/nathankim0/clean-architecture-skills/tree/main/plugins/kent-beck-style/skills/kent-beck-style) |
-| `/simplify` | Asked to simplify code, or when recently changed code has avoidable complexity. Preserve behavior and stay within the task's scope. | [akitaonrails/my-skills](https://github.com/akitaonrails/my-skills/tree/master/simplify) |
-| `/excalidraw` | Asked for a diagram, or to visualize a workflow, architecture, system or concept, including `.excalidraw` files, Obsidian drawings and images for Markdown. Use the Excalidraw MCP tools for every canvas and file operation. | [excalidraw](excalidraw) |
-| `/calendar` | Asked to add, change or check something on Petri's calendar. Place each commitment on the right calendar, check what is already scheduled, and confirm the result afterwards. | [calendar](calendar) |
-| `/wave` | Running inside Wave Terminal and asked to open a file, PDF, image, directory or website, or to manage blocks, tabs or workspaces. Use the `wsh` CLI on the current window instead of `xdg-open` or a second Wave app. | [wave](wave) |
-
 ## Memory
 
 Long-term memory is [ai-memory](https://github.com/akitaonrails/ai-memory), self-hosted and shared by every coding agent here. It keeps each project's wiki, sessions and observations in one store, so work started in one harness can continue in another. Lifecycle hooks capture sessions as they run, and durable project facts belong there rather than in a harness's own memory feature.
