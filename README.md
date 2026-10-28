@@ -42,7 +42,7 @@ Each directory has a `SKILL.md` entry point and any files that skill needs.
 
 ## Memory
 
-The memory system is [ai-memory](https://github.com/akitaonrails/ai-memory), self-hosted and shared by every agent in this setup. It keeps each project's wiki, sessions and observations in one store, so a session started in Claude Code can be continued in Codex or OpenCode. Lifecycle hooks capture the session as it runs; the skills below teach an agent how to read that memory, write to it and keep it tidy.
+The memory system is [ai-memory](https://github.com/akitaonrails/ai-memory), self-hosted and shared by every agent in this setup. It keeps each project's wiki, sessions and observations in one store, so a session started in Claude Code can be continued in Codex or OpenCode. Lifecycle hooks capture the session as it runs.
 
 | Skill | What it does |
 |---|---|

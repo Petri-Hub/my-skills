@@ -45,7 +45,7 @@ Use these skills whenever a request matches the description below, even when Pet
 
 ## Memory
 
-Long-term memory is [ai-memory](https://github.com/akitaonrails/ai-memory), self-hosted and shared by every coding agent here. It keeps each project's wiki, sessions and observations in one store, so work started in one harness can continue in another. Lifecycle hooks capture sessions as they run, and the `ai-memory-*` skills explain how to read that memory, write to it and keep it tidy. Use them whenever a task needs prior context, a handoff, or a note worth keeping.
+Long-term memory is [ai-memory](https://github.com/akitaonrails/ai-memory), self-hosted and shared by every coding agent here. It keeps each project's wiki, sessions and observations in one store, so work started in one harness can continue in another. Lifecycle hooks capture sessions as they run, and durable project facts belong there rather than in a harness's own memory feature.
 
 ## Constraints and Guidelines
 
