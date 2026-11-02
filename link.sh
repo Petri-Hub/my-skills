@@ -4,7 +4,7 @@ set -eu
 repo=$(CDPATH= cd "$(dirname "$0")" && pwd -P)
 opencode_config=${XDG_CONFIG_HOME:-"$HOME/.config"}/opencode
 antigravity_config="$HOME/.gemini/config"
-mkdir -p "$HOME/.codex/skills" "$HOME/.claude/skills" "$opencode_config/skills" "$antigravity_config/skills" "$HOME/.local/bin"
+mkdir -p "$HOME/.codex/skills" "$HOME/.claude/skills" "$opencode_config/skills" "$antigravity_config/skills"
 
 # Remove the links this repository created, so a skill that moved or was deleted
 # heals on the next run instead of leaving a dead link behind.
@@ -44,6 +44,3 @@ for skill_dir in "$repo"/skills/*/; do
     link_path "$skill_dir" "$skills_dir/$skill"
   done
 done
-
-unlink_repo_link "$HOME/.local/bin/langfuse-hermes"
-link_path "$repo/bin/langfuse-hermes" "$HOME/.local/bin/langfuse-hermes"

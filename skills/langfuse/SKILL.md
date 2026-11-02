@@ -5,10 +5,10 @@ description: >-
 allowed-tools:
   - WebFetch(domain:langfuse.com)
   - Bash(curl *langfuse.com/*)
-  - Bash(langfuse-hermes api __schema *)
-  - Bash(langfuse-hermes api * --help *)
-  - Bash(langfuse-hermes api * list *)
-  - Bash(langfuse-hermes api * get *)
+  - Bash(langfuse api __schema *)
+  - Bash(langfuse api * --help *)
+  - Bash(langfuse api * list *)
+  - Bash(langfuse api * get *)
 ---
 
 # Langfuse
@@ -17,7 +17,7 @@ This skill helps you use Langfuse effectively across all common workflows: instr
 
 ## Local Hermes project
 
-For Petri's Hermes project, use `langfuse-hermes` for API calls. It loads the project-specific Viewer key from `~/.config/langfuse/hermes.env` and runs the installed `@langfuse/cli`. The wrapper works from Fish and other shells. The Viewer key is read-only; do not ask for or reuse Lemon's Ingestion key. Keep trace output bounded and treat captured prompts, responses, and tool data as sensitive. See [references/cli.md](references/cli.md) for setup.
+For Petri's Hermes project, use the installed `langfuse` CLI with `LANGFUSE_PUBLIC_KEY`, `LANGFUSE_SECRET_KEY`, and `LANGFUSE_BASE_URL` exported from Fish. The project key should have Viewer permission; do not ask for or reuse Lemon's Ingestion key. Keep trace output bounded and treat captured prompts, responses, and tool data as sensitive. Never use `--curl` with credentials because its preview includes the Authorization header. See [references/cli.md](references/cli.md) for setup.
 
 ## Core Principles
 
@@ -49,31 +49,31 @@ Follow these principles for ALL Langfuse work:
 
 ## 1. Langfuse API via CLI
 
-Use the Langfuse CLI to interact with the full Langfuse REST API from the command line. For the Hermes project, use the local wrapper:
+Use the installed Langfuse CLI to interact with the full Langfuse REST API from the command line:
 
 Start by discovering the schema and available arguments:
 
 ```bash
 # Discover all available resources
-langfuse-hermes api __schema
+langfuse api __schema
 
 # List actions for a resource
-langfuse-hermes api <resource> --help
+langfuse api <resource> --help
 
 # Show args/options for a specific action
-langfuse-hermes api <resource> <action> --help
+langfuse api <resource> <action> --help
 ```
 
 ### Credentials
 
-The Hermes wrapper loads these variables from the local `hermes.env` file. For other projects, set them in the process environment before making calls:
+Set these variables in the process environment before making calls. For the Hermes project, Fish loads them from a local file outside Git:
 
 ```bash
 export LANGFUSE_PUBLIC_KEY=pk-lf-...
 export LANGFUSE_SECRET_KEY=sk-lf-...
 export LANGFUSE_BASE_URL=https://cloud.langfuse.com # EU example; use https://us.cloud.langfuse.com for the US cloud.
 ```
-If not set, ask the user to configure the local file or process environment. Keys are found in the Langfuse project under Settings -> API Keys. Do not ask them to paste keys into chat.
+If not set, ask the user to configure the local Fish file or process environment. Keys are found in the Langfuse project under Settings -> API Keys. Do not ask them to paste keys into chat.
 
 ### Detailed CLI Reference
 

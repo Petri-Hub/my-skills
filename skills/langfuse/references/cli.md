@@ -19,40 +19,40 @@ npm install --global @langfuse/cli
 langfuse api <resource> <action>
 ```
 
-For the Hermes project, run `langfuse-hermes` instead of `langfuse`. It loads a separate Viewer key from a local file and passes the arguments through to the CLI. On each machine:
+For the Hermes project, use the installed `langfuse` command directly. On each machine:
 
-1. Install `@langfuse/cli` globally and run `make link` in `my-skills` to link the wrapper into `~/.local/bin`.
+1. Install `@langfuse/cli` globally and run `make link` in `my-skills` to install the skill for each coding agent.
 2. Store the Hermes Viewer key pair in 1Password.
-3. Create `~/.config/langfuse/hermes.env` with mode `0600` and these lines, replacing the placeholders locally:
+3. Create `~/.config/fish/conf.d/langfuse.fish` locally with mode `0600` and these lines, replacing the placeholders from 1Password:
 
-   ```sh
-   LANGFUSE_PUBLIC_KEY=your-viewer-public-key
-   LANGFUSE_SECRET_KEY=your-viewer-secret-key
-   LANGFUSE_BASE_URL=https://us.cloud.langfuse.com
+   ```fish
+   set -gx LANGFUSE_PUBLIC_KEY 'your-viewer-public-key'
+   set -gx LANGFUSE_SECRET_KEY 'your-viewer-secret-key'
+   set -gx LANGFUSE_BASE_URL 'https://us.cloud.langfuse.com'
    ```
 
-4. Run `langfuse-hermes api __schema` to verify CLI startup, then make a bounded read query to verify authentication.
+4. Start a new Fish session and run a bounded read query with `langfuse api observations list` to verify authentication. No separate login step is needed.
 
-Do not put the key in Fish's `config.fish` or a universal variable. The wrapper reads this file for each invocation, so Fish does not need to export anything. Do not print the file or put its values in a command line or issue/PR text. The CLI has no separate login step. The key pair scopes access to the Hermes Langfuse project; the Viewer permission allows reads and blocks writes.
+Fish exports these variables to commands started from that session, including coding agents. If an agent's command shell did not inherit the variables, it can invoke the CLI through Fish with `fish -c 'langfuse api …'`. Do not print the config file or put its values in a command line or issue/PR text. A Viewer key allows reads and blocks writes.
 
 ## Discovery
 
 ```bash
 # List all resources and auth info
-langfuse-hermes api __schema
+langfuse api __schema
 
 # List actions for a resource
-langfuse-hermes api <resource> --help
+langfuse api <resource> --help
 
 # Show args/options for a specific action
-langfuse-hermes api <resource> <action> --help
+langfuse api <resource> <action> --help
 ```
 
-Do not use `--curl` with credentials: the preview prints the Authorization header. The Hermes wrapper rejects this flag.
+Do not use `--curl` with credentials: the preview prints the Authorization header.
 
 ## Credentials
 
-Outside the Hermes wrapper, the CLI reads these environment variables. In Fish, set them for the current session with `set -gx`:
+The CLI reads these environment variables. In Fish, set them for the current session with `set -gx`:
 
 ```fish
 set -gx LANGFUSE_PUBLIC_KEY 'your-project-public-key'

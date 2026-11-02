@@ -29,8 +29,6 @@ Run `make link` once per machine, and again after adding a skill or setting up a
 | Codex | `~/.codex/AGENTS.md` | `~/.codex/skills/` |
 | OpenCode | `~/.config/opencode/AGENTS.md` | `~/.config/opencode/skills/` |
 
-It also links the `langfuse-hermes` CLI wrapper into `~/.local/bin`.
-
 ## Skills
 
 Each directory under `skills/` has a `SKILL.md` entry point and any files that skill needs.
@@ -46,7 +44,7 @@ Each directory under `skills/` has a `SKILL.md` entry point and any files that s
 | [wave](skills/wave/SKILL.md) | Opens files, folders and websites, and manages blocks, tabs and workspaces inside Wave Terminal. |
 | [langfuse](skills/langfuse/SKILL.md) | Uses Langfuse documentation and the CLI to investigate Hermes traces and other AI engineering work. |
 
-For Hermes trace access, install `@langfuse/cli` and configure a separate Langfuse Viewer key. The [Langfuse CLI reference](skills/langfuse/references/cli.md) describes the local file used by the Fish-compatible `langfuse-hermes` wrapper. The skill is based on [Langfuse's official skill](https://github.com/langfuse/skills/tree/298b316eb9a5d302811c4182fb9c1ee81a449257/skills/langfuse) at commit `298b316eb9a5d302811c4182fb9c1ee81a449257`, with CLI and local setup adjustments. Its MIT license is included in the skill directory.
+For Hermes trace access, install `@langfuse/cli` and expose a separate Langfuse Viewer key through Fish environment variables. The [Langfuse CLI reference](skills/langfuse/references/cli.md) describes the setup. The skill is based on [Langfuse's official skill](https://github.com/langfuse/skills/tree/298b316eb9a5d302811c4182fb9c1ee81a449257/skills/langfuse) at commit `298b316eb9a5d302811c4182fb9c1ee81a449257`, with CLI package and local setup adjustments. Its MIT license is included in the skill directory.
 
 ## Memory
 
