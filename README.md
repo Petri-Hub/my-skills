@@ -44,8 +44,6 @@ Each directory under `skills/` has a `SKILL.md` entry point and any files that s
 | [wave](skills/wave/SKILL.md) | Opens files, folders and websites, and manages blocks, tabs and workspaces inside Wave Terminal. |
 | [langfuse](skills/langfuse/SKILL.md) | Uses Langfuse documentation and the CLI to investigate Hermes traces and other AI engineering work. |
 
-For Hermes trace access, install `@langfuse/cli` and expose a separate Langfuse Viewer key through Fish environment variables. The [Langfuse CLI reference](skills/langfuse/references/cli.md) describes the setup. The skill is based on [Langfuse's official skill](https://github.com/langfuse/skills/tree/298b316eb9a5d302811c4182fb9c1ee81a449257/skills/langfuse) at commit `298b316eb9a5d302811c4182fb9c1ee81a449257`, with CLI package and local setup adjustments. Its MIT license is included in the skill directory.
-
 ## Memory
 
 The memory system is [ai-memory](https://github.com/akitaonrails/ai-memory), self-hosted and shared by every agent in this setup. It keeps each project's wiki, sessions and observations in one store, so a session started in Claude Code can be continued in Codex or OpenCode. Lifecycle hooks capture the session as it runs.
