@@ -42,6 +42,7 @@ Each directory under `skills/` has a `SKILL.md` entry point and any files that s
 | [excalidraw](skills/excalidraw/SKILL.md) | Guides diagram design and uses the local Excalidraw MCP server to create and render diagrams. |
 | [calendar](skills/calendar/SKILL.md) | Places each commitment on the right calendar and keeps the schedule free of duplicates. |
 | [wave](skills/wave/SKILL.md) | Opens files, folders and websites, and manages blocks, tabs and workspaces inside Wave Terminal. |
+| [langfuse](skills/langfuse/SKILL.md) | Uses Langfuse documentation and the CLI to investigate Hermes traces and other AI engineering work. |
 
 ## Memory
 
