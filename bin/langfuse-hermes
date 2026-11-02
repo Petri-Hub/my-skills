@@ -1,0 +1,29 @@
+#!/bin/sh
+set -eu
+
+config=${XDG_CONFIG_HOME:-"$HOME/.config"}/langfuse/hermes.env
+
+for arg do
+  if [ "$arg" = '--curl' ]; then
+    printf 'The curl preview includes the Authorization header; use CLI help instead.\n' >&2
+    exit 2
+  fi
+done
+
+if [ ! -r "$config" ]; then
+  printf 'Hermes Langfuse config is missing: %s\n' "$config" >&2
+  exit 3
+fi
+
+unset LANGFUSE_PUBLIC_KEY LANGFUSE_SECRET_KEY LANGFUSE_BASE_URL
+set -a
+# The file is created locally from the Viewer key stored in 1Password.
+. "$config"
+set +a
+
+if [ -z "${LANGFUSE_PUBLIC_KEY:-}" ] || [ -z "${LANGFUSE_SECRET_KEY:-}" ] || [ -z "${LANGFUSE_BASE_URL:-}" ]; then
+  printf 'Hermes Langfuse config must set LANGFUSE_PUBLIC_KEY, LANGFUSE_SECRET_KEY, and LANGFUSE_BASE_URL\n' >&2
+  exit 3
+fi
+
+exec langfuse "$@"
