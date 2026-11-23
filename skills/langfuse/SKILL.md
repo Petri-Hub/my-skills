@@ -21,9 +21,9 @@ For Petri's Hermes project, use the installed `langfuse` CLI with `LANGFUSE_PUBL
 
 ## Core Principles
 
-Follow these principles for ALL Langfuse work:
+Follow these principles for all Langfuse work:
 
-1. **Documentation First**: NEVER implement based on memory. Always fetch current docs before writing code (Langfuse updates frequently) See the section below on how to access documentation.
+1. **Documentation First**: Fetch the current docs before writing code instead of implementing from memory, because Langfuse changes often. The section below shows how.
 2. **CLI for Data Access**: Use the Langfuse CLI when querying/modifying Langfuse data. See the section below on how to use the CLI.
 3. **Best Practices by Use Case**: Read the relevant reference below use-case-specific guidelines before asking the user for more details or implementing.
 4. **Use latest Langfuse versions**: Unless the user specified otherwise or there's a good reason, always use the latest version of Langfuse SDKs/APIs. Even if you're only creating a plan for another agent to execute, be explicit about the exact version to use.
