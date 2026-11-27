@@ -43,6 +43,7 @@ Each directory under `skills/` has a `SKILL.md` entry point and any files that s
 | [calendar](skills/calendar/SKILL.md) | Places each commitment on the right calendar and keeps the schedule free of duplicates. |
 | [wave](skills/wave/SKILL.md) | Opens files, folders and websites, and manages blocks, tabs and workspaces inside Wave Terminal. |
 | [langfuse](skills/langfuse/SKILL.md) | Uses Langfuse documentation and the CLI to investigate Hermes traces and other AI engineering work. |
+| [forge-skill](skills/forge-skill/SKILL.md) | Creates, updates and reviews skills that agents follow and people can still read and maintain. |
 
 ## Memory
 
@@ -82,6 +83,7 @@ As models get better, I get more from pairing with an LLM: watching its work, in
 - [Kent Beck coding style skill](https://github.com/nathankim0/clean-architecture-skills/tree/main/plugins/kent-beck-style/skills/kent-beck-style)
 - [Fábio Akita's code simplification skill](https://github.com/akitaonrails/my-skills/tree/master/simplify), adapted from [Addy Osmani's original](https://github.com/addyosmani/agent-skills/tree/main/skills/code-simplification)
 - [Humanizer writing skill](https://github.com/blader/humanizer)
+- [Demiurge forge-principles](https://github.com/Petri-Hub/demiurge/blob/main/skills/forge-principles/SKILL.md) and [Ponytail](https://github.com/DietrichGebert/ponytail), the sources of forge-skill's principles and style
 - [Brag launch video skill](https://github.com/latent-spaces/brag/tree/main/skills/brag)
 - [Excalidraw MCP server](https://github.com/yctimlin/mcp_excalidraw)
 - [Excalidraw diagram design guidance](https://github.com/coleam00/excalidraw-diagram-skill)
