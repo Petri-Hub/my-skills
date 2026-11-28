@@ -4,7 +4,8 @@ set -eu
 repo=$(CDPATH= cd "$(dirname "$0")" && pwd -P)
 opencode_config=${XDG_CONFIG_HOME:-"$HOME/.config"}/opencode
 antigravity_config="$HOME/.gemini/config"
-mkdir -p "$HOME/.codex/skills" "$HOME/.claude/skills" "$opencode_config/skills" "$antigravity_config/skills"
+kiro_config="$HOME/.kiro"
+mkdir -p "$HOME/.codex/skills" "$HOME/.claude/skills" "$opencode_config/skills" "$antigravity_config/skills" "$kiro_config/steering" "$kiro_config/skills"
 
 # Remove the links this repository created, so a skill that moved or was deleted
 # heals on the next run instead of leaving a dead link behind.
@@ -25,7 +26,7 @@ link_path() {
   ln -s "$1" "$2"
 }
 
-for dir in "$HOME/.codex/skills" "$HOME/.claude/skills" "$opencode_config/skills" "$antigravity_config/skills"; do
+for dir in "$HOME/.codex/skills" "$HOME/.claude/skills" "$opencode_config/skills" "$antigravity_config/skills" "$kiro_config/skills"; do
   for link in "$dir"/*; do
     unlink_repo_link "$link"
   done
@@ -40,7 +41,11 @@ for skill_dir in "$repo"/skills/*/; do
   [ -f "${skill_dir}SKILL.md" ] || continue
   skill=$(basename "$skill_dir")
 
-  for skills_dir in "$HOME/.codex/skills" "$HOME/.claude/skills" "$opencode_config/skills" "$antigravity_config/skills"; do
+  for skills_dir in "$HOME/.codex/skills" "$HOME/.claude/skills" "$opencode_config/skills" "$antigravity_config/skills" "$kiro_config/skills"; do
     link_path "$skill_dir" "$skills_dir/$skill"
   done
 done
+
+# Link AGENTS.md to Kiro steering directory
+unlink_repo_link "$kiro_config/steering/AGENTS.md"
+link_path "$repo/AGENTS.md" "$kiro_config/steering/AGENTS.md"

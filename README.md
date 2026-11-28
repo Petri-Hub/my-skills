@@ -44,6 +44,7 @@ Each directory under `skills/` has a `SKILL.md` entry point and any files that s
 | [wave](skills/wave/SKILL.md) | Opens files, folders and websites, and manages blocks, tabs and workspaces inside Wave Terminal. |
 | [langfuse](skills/langfuse/SKILL.md) | Uses Langfuse documentation and the CLI to investigate Hermes traces and other AI engineering work. |
 | [forge-skill](skills/forge-skill/SKILL.md) | Creates, updates and reviews skills that agents follow and people can still read and maintain. |
+| [healthcheck](skills/healthcheck/SKILL.md) | Scans the machine, the agent setup, public sites and the homelab, then reports what needs attention and what to do next. |
 
 ## Memory
 
