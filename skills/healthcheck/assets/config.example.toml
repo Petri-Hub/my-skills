@@ -1,0 +1,52 @@
+# Healthcheck inventory.
+#
+# Copy this file to ~/.config/healthcheck/config.toml and fill in the values.
+# Keep the real file outside the repository: my-skills is public.
+
+[general]
+# Where the skills live, so parity can compare every agent against one source.
+my_skills = "~/Desktop/Personal/Projects/my-skills"
+# Optional: used only by --verbose to list services Gatus does not monitor.
+lab_repo = "~/Desktop/Personal/Projects/lab"
+# Seconds before an HTTP request gives up.
+timeout = 8
+
+[agents]
+# Agents to compare. Remove one when a machine does not have it.
+enabled = ["claude", "codex", "opencode", "kiro", "antigravity"]
+# The MCP servers every agent should expose. Omit to derive the union of what
+# the agents already have.
+expected_mcp = ["ai-memory", "excalidraw", "roblox-assets"]
+
+[lab]
+# Public Gatus status page. The script reads /api/v1/endpoints/statuses.
+gatus_url = "https://lab-health.example.com"
+# SSH alias used only with --deep.
+ssh_host = "lab"
+
+[services.ai_memory]
+url = "http://lab:6841"
+cli = "~/.local/bin/ai-memory"
+
+[services.wakapi]
+api_url = "https://lab-wakapi.example.com/api"
+# File that holds `api_key = ...`; the value is never printed.
+api_key_file = "~/.wakatime.cfg"
+max_heartbeat_age_min = 180
+
+[thresholds]
+disk_warn = 80
+disk_fail = 90
+mem_warn = 85
+mem_fail = 95
+temp_warn = 80
+temp_fail = 90
+# Pending package updates at or above this count turn the row into a warning.
+updates_warn = 10
+
+# One block per public site. `expect` is matched case-insensitively in the body.
+[[web.sites]]
+name = "portfolio"
+url = "https://example.com/"
+expect = "Example"
+min_bytes = 5000
